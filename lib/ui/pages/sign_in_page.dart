@@ -64,7 +64,9 @@ class SignInPage extends StatelessWidget {
                 SizedBox(height: 30),
                 CustomFilledButton(
                   title: 'Sign In',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
                 ),
               ],
             ),
