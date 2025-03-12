@@ -19,7 +19,7 @@ class ProfileMenuItem extends StatelessWidget {
       margin: const EdgeInsets.only(
         bottom: 30,
       ),
-      child: InkWell(
+      child: GestureDetector(
         onTap: onTap,
         child: Row(
           children: [

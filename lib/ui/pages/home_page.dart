@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
           buildProfile(context),
           buildWalletCard(),
           buildLevel(),
-          buildService(),
+          buildService(context),
           buildLatestTransaction(),
           buildSendAgain(),
           buildFriendlyTips(),
@@ -276,7 +276,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildService() {
+  Widget buildService(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
         top: 30,
@@ -300,6 +300,9 @@ class HomePage extends StatelessWidget {
               HomeServiceItem(
                 iconUrl: 'assets/ic_topup.png',
                 title: 'Top Up',
+                onTap: () {
+                  Navigator.pushNamed(context, '/topup');
+                },
               ),
               HomeServiceItem(
                 iconUrl: 'assets/ic_send.png',
